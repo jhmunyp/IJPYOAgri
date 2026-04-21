@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이정표농업 관리자 | 지원사업 등록</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUIT:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-surface"></div>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">IJ</span>
+          <span>
+            <strong class="brand-name">이정표농업 관리자</strong>
+            <small class="brand-sub">지원사업 등록 · 검수 · 링크 관리</small>
+          </span>
+        </a>
+
+        <nav class="topnav">
+          <a href="index.html">프론트 보기</a>
+          <a href="#register">지원사업 등록</a>
+          <a href="#table">데이터 현황</a>
+        </nav>
+
+        <div class="top-actions">
+          <a class="button secondary small" href="index.html">사용자 화면</a>
+        </div>
+      </header>
+
+      <div class="admin-shell">
+        <aside class="admin-sidebar">
+          <p class="eyebrow">Back Office</p>
+          <h2>운영 메뉴</h2>
+          <p class="admin-subtitle">
+            프론트와 분리된 관리자 화면에서 지원사업과 링크, 광고 연결 정보를 정리하는 구조입니다.
+          </p>
+
+          <nav class="admin-menu">
+            <a class="active" href="#register">지원사업 등록</a>
+            <a href="#table">등록 현황</a>
+            <a href="#links">참고 링크 관리</a>
+            <a href="#ads">광고 연결 관리</a>
+          </nav>
+        </aside>
+
+        <section class="admin-main">
+          <div class="admin-title-row">
+            <div>
+              <p class="eyebrow">Dashboard</p>
+              <h1>운영자가 정보를 구조화해서 프론트에 노출하는 흐름</h1>
+            </div>
+            <a class="button primary small" href="#register">새 공고 등록</a>
+          </div>
+
+          <div class="stats-grid">
+            <div class="mini-stat">
+              <strong>등록된 지원사업</strong>
+              <span class="side-note">6건</span>
+            </div>
+            <div class="mini-stat">
+              <strong>검수 대기</strong>
+              <span class="side-note">2건</span>
+            </div>
+            <div class="mini-stat">
+              <strong>참고 링크</strong>
+              <span class="side-note">12건</span>
+            </div>
+            <div class="mini-stat">
+              <strong>연결 기업</strong>
+              <span class="side-note">5개</span>
+            </div>
+          </div>
+
+          <section id="register" class="admin-form">
+            <h3>지원사업 등록 폼</h3>
+            <p class="admin-subtitle">
+              추천 결과에서 바로 보여줄 수 있도록 지원자격, 지원금액, 신청방법, 링크를 구조화해서 입력합니다.
+            </p>
+
+            <div class="admin-form-grid">
+              <label>
+                사업명
+                <input type="text" value="청년 스마트농업 창업 기반 지원" />
+              </label>
+              <label>
+                출처 기관
+                <input type="text" value="전북도 농업기술원" />
+              </label>
+              <label>
+                지역
+                <select>
+                  <option>전북</option>
+                  <option>경북</option>
+                  <option>전남</option>
+                  <option>충남</option>
+                </select>
+              </label>
+              <label>
+                분야
+                <select>
+                  <option>스마트팜</option>
+                  <option>원예</option>
+                  <option>축산</option>
+                  <option>가공유통</option>
+                </select>
+              </label>
+              <label>
+                신청 기간
+                <input type="text" value="2026.05.01 - 2026.06.15" />
+              </label>
+              <label>
+                지원금액
+                <input type="text" value="최대 5,000만원" />
+              </label>
+              <label class="span-2">
+                지원 요약
+                <textarea>스마트팜 시설 구축, 장비 도입, 교육과 컨설팅을 묶어서 지원하는 청년 창업형 사업</textarea>
+              </label>
+              <label class="span-2">
+                지원자격
+                <textarea>전북 거주 또는 사업 예정자, 만 39세 이하 청년, 예비창업 또는 영농 3년 이내</textarea>
+              </label>
+              <label class="span-2">
+                신청 방법
+                <textarea>시군 농업기술센터 상담 > 사업계획서 제출 > 온라인 또는 방문 접수 > 선정 후 교육 이수</textarea>
+              </label>
+              <label class="span-2">
+                참고 링크
+                <textarea>https://www.nongsaro.go.kr/portal/portalMain.ps?menuId=PS00001
+https://www.nongsaro.go.kr/</textarea>
+              </label>
+            </div>
+
+            <div class="admin-row">
+              <p class="side-note">프론트에는 구조화된 정보만 노출하고, 원문 링크는 참고 자료로 별도 연결합니다.</p>
+              <button class="button primary" type="button">임시 저장</button>
+            </div>
+          </section>
+
+          <section id="table" class="admin-table-wrap">
+            <h3>등록 현황</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>사업명</th>
+                  <th>지역</th>
+                  <th>분야</th>
+                  <th>상태</th>
+                  <th>참고 링크</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>청년 스마트농업 창업 기반 지원</td>
+                  <td>전북</td>
+                  <td>스마트팜</td>
+                  <td>게시중</td>
+                  <td>2건</td>
+                </tr>
+                <tr>
+                  <td>시설원예 ICT 융복합 확산사업</td>
+                  <td>전북</td>
+                  <td>스마트팜</td>
+                  <td>검수중</td>
+                  <td>2건</td>
+                </tr>
+                <tr>
+                  <td>축산 스마트환경 제어 지원사업</td>
+                  <td>경북</td>
+                  <td>축산</td>
+                  <td>게시중</td>
+                  <td>1건</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
