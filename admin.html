@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-surface"></div>
     <div class="site-shell">
       <header class="topbar">
         <a class="brand" href="index.html">
@@ -27,20 +26,19 @@
         <nav class="topnav">
           <a href="index.html">프론트 보기</a>
           <a href="#register">지원사업 등록</a>
-          <a href="#table">데이터 현황</a>
+          <a href="#table">등록 현황</a>
         </nav>
 
         <div class="top-actions">
-          <a class="button secondary small" href="index.html">사용자 화면</a>
+          <a class="ghost-link" href="index.html">사용자 화면</a>
         </div>
       </header>
 
-      <div class="admin-shell">
-        <aside class="admin-sidebar">
-          <p class="eyebrow">Back Office</p>
+      <div class="admin-shell plain-admin-shell">
+        <aside class="admin-sidebar plain-admin-sidebar">
           <h2>운영 메뉴</h2>
           <p class="admin-subtitle">
-            프론트와 분리된 관리자 화면에서 지원사업과 링크, 광고 연결 정보를 정리하는 구조입니다.
+            지원사업 데이터, 참고 링크, 게시 상태를 관리하는 화면입니다.
           </p>
 
           <nav class="admin-menu">
@@ -51,11 +49,13 @@
           </nav>
         </aside>
 
-        <section class="admin-main">
+        <section class="admin-main plain-admin-main">
           <div class="admin-title-row">
             <div>
-              <p class="eyebrow">Dashboard</p>
-              <h1>운영자가 정보를 구조화해서 프론트에 노출하는 흐름</h1>
+              <h1>지원사업 정보를 구조화해 프론트에 노출합니다</h1>
+              <p class="admin-subtitle">
+                프론트에서는 요약과 신청 정보를 보여주고, 관리자에서는 입력과 검수에 집중합니다.
+              </p>
             </div>
             <a class="button primary small" href="#register">새 공고 등록</a>
           </div>
@@ -80,9 +80,9 @@
           </div>
 
           <section id="register" class="admin-form">
-            <h3>지원사업 등록 폼</h3>
+            <h3>지원사업 등록</h3>
             <p class="admin-subtitle">
-              추천 결과에서 바로 보여줄 수 있도록 지원자격, 지원금액, 신청방법, 링크를 구조화해서 입력합니다.
+              추천 결과 카드에 바로 쓰일 수 있도록 요약, 자격, 금액, 절차, 링크를 분리해서 입력합니다.
             </p>
 
             <div class="admin-form-grid">
@@ -140,7 +140,7 @@ https://www.nongsaro.go.kr/</textarea>
             </div>
 
             <div class="admin-row">
-              <p class="side-note">프론트에는 구조화된 정보만 노출하고, 원문 링크는 참고 자료로 별도 연결합니다.</p>
+              <p class="side-note">원문 공고 링크는 반드시 함께 저장해 요약 정보와 교차 검증할 수 있게 합니다.</p>
               <button class="button primary" type="button">임시 저장</button>
             </div>
           </section>

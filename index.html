@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-surface"></div>
     <div class="site-shell">
       <header class="topbar">
         <a class="brand" href="#top">
@@ -37,167 +36,134 @@
 
         <div class="top-actions">
           <a class="ghost-link" href="admin.html">운영 대시보드</a>
-          <a class="button primary small" href="#search">지금 탐색</a>
         </div>
       </header>
 
-      <main id="top">
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow">Front Office</p>
-            <h1>찾고 싶은 지원사업을 검색하면 AI가 맞는 사업부터 바로 정리해줍니다.</h1>
+      <main id="top" class="page-main">
+        <section class="intro-section">
+          <div class="intro-copy">
+            <h1>찾고 싶은 지원사업을 검색하고 바로 비교할 수 있습니다.</h1>
             <p class="hero-text">
-              농사로처럼 신뢰할 수 있는 정보 구조를 바탕으로, 사람인처럼 검색 중심으로 탐색하고,
-              한눈에 읽히는 카드형 결과로 지원 자격, 지원금액, 신청 절차, 참고 링크까지 이어집니다.
+              지역, 분야, 성장 단계, 사업 형태를 기준으로 농업 지원사업을 정리하고,
+              추천 결과에서는 지원 자격, 지원금액, 신청 방법, 필요 서류, 참고 링크를
+              한 번에 확인할 수 있습니다.
             </p>
-
-            <div class="hero-actions">
-              <a class="button primary" href="#search">AI 추천 받기</a>
-              <a class="button secondary" href="#results">결과 예시 보기</a>
-            </div>
-
-            <div class="hero-points">
-              <div class="hero-point">
-                <strong>빠른 검색</strong>
-                <span>검색어와 필터를 함께 써서 원하는 사업을 바로 좁힙니다.</span>
-              </div>
-              <div class="hero-point">
-                <strong>직관적 추천</strong>
-                <span>왜 추천되는지 근거와 함께 적합도 순으로 보여줍니다.</span>
-              </div>
-              <div class="hero-point">
-                <strong>실행 가능한 정보</strong>
-                <span>지원 방법, 필요 서류, 참고 링크까지 바로 확인합니다.</span>
-              </div>
-            </div>
           </div>
-
-          <aside class="hero-side">
-            <div class="side-card featured">
-              <p class="card-kicker">오늘 많이 찾는 주제</p>
-              <div class="chip-cloud">
-                <button type="button" class="chip-button" data-quick-query="청년 스마트팜 창업 지원">
-                  청년 스마트팜 창업 지원
-                </button>
-                <button type="button" class="chip-button" data-quick-query="전북 시설원예 현대화">
-                  전북 시설원예 현대화
-                </button>
-                <button type="button" class="chip-button" data-quick-query="축산 자동화 법인 지원">
-                  축산 자동화 법인 지원
-                </button>
-                <button type="button" class="chip-button" data-quick-query="농산물 가공 창업 패키지">
-                  농산물 가공 창업 패키지
-                </button>
-              </div>
+          <div class="intro-notes">
+            <div class="note-block">
+              <strong>검색 중심</strong>
+              <p>검색어와 필터를 함께 사용해 결과 범위를 좁힙니다.</p>
             </div>
-
-            <div class="side-card compact">
-              <p class="card-kicker">추천 기준</p>
-              <ul class="clean-list">
-                <li>지역 일치 여부</li>
-                <li>작목 및 분야 적합도</li>
-                <li>성장 단계와 법인 여부</li>
-                <li>검색어와 공고 핵심어 연관도</li>
-              </ul>
+            <div class="note-block">
+              <strong>실행 정보 중심</strong>
+              <p>추천 이유보다 실제 지원에 필요한 항목을 먼저 보여줍니다.</p>
             </div>
-          </aside>
-        </section>
-
-        <section id="search" class="search-section">
-          <div class="search-panel">
-            <div class="search-header">
-              <div>
-                <p class="eyebrow">Search</p>
-                <h2>검색과 필터를 함께 써서 원하는 지원사업을 빠르게 찾으세요</h2>
-              </div>
-              <p class="search-caption">
-                검색어를 먼저 입력하고, 지역과 분야를 좁히면 더 정확한 추천을 받을 수 있습니다.
-              </p>
-            </div>
-
-            <form id="search-form" class="search-form">
-              <div class="keyword-row">
-                <input
-                  id="query"
-                  name="query"
-                  type="text"
-                  placeholder="예: 전북 청년 스마트팜 창업 지원사업"
-                />
-                <button type="submit" class="button primary">AI 탐색</button>
-              </div>
-
-              <div class="filter-grid">
-                <label>
-                  지역
-                  <select id="region" name="region">
-                    <option value="전체">전체</option>
-                    <option value="전북">전북</option>
-                    <option value="경북">경북</option>
-                    <option value="전남">전남</option>
-                    <option value="충남">충남</option>
-                  </select>
-                </label>
-                <label>
-                  분야
-                  <select id="category" name="category">
-                    <option value="전체">전체</option>
-                    <option value="스마트팜">스마트팜</option>
-                    <option value="원예">원예</option>
-                    <option value="축산">축산</option>
-                    <option value="가공유통">가공유통</option>
-                  </select>
-                </label>
-                <label>
-                  성장 단계
-                  <select id="stage" name="stage">
-                    <option value="전체">전체</option>
-                    <option value="예비창업">예비창업</option>
-                    <option value="초기운영">초기운영</option>
-                    <option value="성장단계">성장단계</option>
-                  </select>
-                </label>
-                <label>
-                  연령대
-                  <select id="ageGroup" name="ageGroup">
-                    <option value="전체">전체</option>
-                    <option value="청년">청년</option>
-                    <option value="중장년">중장년</option>
-                  </select>
-                </label>
-                <label>
-                  사업 형태
-                  <select id="entityType" name="entityType">
-                    <option value="전체">전체</option>
-                    <option value="개인">개인</option>
-                    <option value="법인">법인</option>
-                  </select>
-                </label>
-              </div>
-            </form>
           </div>
         </section>
 
-        <section id="results" class="results-section">
+        <section id="search" class="content-section">
+          <div class="section-head">
+            <h2>지원사업 검색</h2>
+            <p>검색어를 먼저 입력하고, 지역과 분야를 선택하면 더 정확한 결과를 볼 수 있습니다.</p>
+          </div>
+
+          <form id="search-form" class="search-form">
+            <div class="keyword-row">
+              <input
+                id="query"
+                name="query"
+                type="text"
+                placeholder="예: 전북 청년 스마트팜 창업 지원사업"
+              />
+              <button type="submit" class="button primary">검색</button>
+            </div>
+
+            <div class="quick-links-row">
+              <button type="button" class="text-chip" data-quick-query="청년 스마트팜 창업 지원">
+                청년 스마트팜 창업 지원
+              </button>
+              <button type="button" class="text-chip" data-quick-query="전북 시설원예 현대화">
+                전북 시설원예 현대화
+              </button>
+              <button type="button" class="text-chip" data-quick-query="축산 자동화 법인 지원">
+                축산 자동화 법인 지원
+              </button>
+              <button type="button" class="text-chip" data-quick-query="농산물 가공 창업 패키지">
+                농산물 가공 창업 패키지
+              </button>
+            </div>
+
+            <div class="filter-grid">
+              <label>
+                지역
+                <select id="region" name="region">
+                  <option value="전체">전체</option>
+                  <option value="전북">전북</option>
+                  <option value="경북">경북</option>
+                  <option value="전남">전남</option>
+                  <option value="충남">충남</option>
+                </select>
+              </label>
+              <label>
+                분야
+                <select id="category" name="category">
+                  <option value="전체">전체</option>
+                  <option value="스마트팜">스마트팜</option>
+                  <option value="원예">원예</option>
+                  <option value="축산">축산</option>
+                  <option value="가공유통">가공유통</option>
+                </select>
+              </label>
+              <label>
+                성장 단계
+                <select id="stage" name="stage">
+                  <option value="전체">전체</option>
+                  <option value="예비창업">예비창업</option>
+                  <option value="초기운영">초기운영</option>
+                  <option value="성장단계">성장단계</option>
+                </select>
+              </label>
+              <label>
+                연령대
+                <select id="ageGroup" name="ageGroup">
+                  <option value="전체">전체</option>
+                  <option value="청년">청년</option>
+                  <option value="중장년">중장년</option>
+                </select>
+              </label>
+              <label>
+                사업 형태
+                <select id="entityType" name="entityType">
+                  <option value="전체">전체</option>
+                  <option value="개인">개인</option>
+                  <option value="법인">법인</option>
+                </select>
+              </label>
+            </div>
+          </form>
+        </section>
+
+        <section id="results" class="content-section">
           <div class="results-top">
             <div>
-              <p class="eyebrow">Results</p>
-              <h2 id="result-title">AI가 조건에 맞는 지원사업을 정리했습니다</h2>
+              <h2 id="result-title">조건에 맞는 지원사업을 정리했습니다</h2>
+              <p id="ai-summary-body" class="body-copy">
+                지역과 분야를 함께 입력하면 더 높은 적합도의 사업을 우선 추천합니다.
+              </p>
             </div>
             <div class="result-top-right">
               <span id="result-count" class="meta-pill">0건 추천</span>
-              <div id="search-tags" class="tag-row"></div>
             </div>
           </div>
 
+          <div id="search-tags" class="tag-row"></div>
+
           <div class="results-layout">
             <section class="main-results">
-              <article class="insight-panel">
-                <div>
-                  <p class="card-kicker">AI 요약</p>
-                  <h3 id="ai-summary-title">검색 의도와 사용자 조건을 분석하고 있습니다</h3>
-                </div>
-                <p id="ai-summary-body" class="body-copy">
-                  지역과 분야를 함께 입력하면 더 높은 적합도의 사업을 우선 추천합니다.
+              <article class="summary-box">
+                <h3 id="ai-summary-title">가장 적합한 사업을 우선으로 정렬했습니다</h3>
+                <p class="body-copy">
+                  추천 결과는 검색어, 지역, 분야, 성장 단계, 사업 형태 조건을 함께 반영합니다.
                 </p>
               </article>
 
@@ -205,51 +171,52 @@
             </section>
 
             <aside class="results-sidebar">
-              <div class="side-card">
-                <p class="card-kicker">읽는 순서</p>
-                <ul class="clean-list">
-                  <li>지원 대상이 맞는지 확인</li>
-                  <li>지원금액과 지원 범위를 확인</li>
-                  <li>신청 방법과 제출 서류를 확인</li>
-                  <li>참고 링크에서 원문 공고를 확인</li>
-                </ul>
+              <div class="sidebar-box">
+                <h3>결과 확인 순서</h3>
+                <ol class="step-list">
+                  <li>지원 대상이 맞는지 먼저 확인</li>
+                  <li>지원금액과 자부담 비율 확인</li>
+                  <li>신청 기간과 제출 서류 확인</li>
+                  <li>참고 링크에서 원문 공고 확인</li>
+                </ol>
               </div>
 
-              <div class="side-card">
-                <p class="card-kicker">운영자 입력 정보</p>
+              <div class="sidebar-box">
+                <h3>관리자 입력 기준</h3>
                 <ul class="clean-list">
-                  <li>지원 자격</li>
-                  <li>지원 금액</li>
-                  <li>신청 기간</li>
-                  <li>신청 링크와 참고 자료</li>
+                  <li>지원자격</li>
+                  <li>지원금액</li>
+                  <li>신청 절차</li>
+                  <li>필요 서류</li>
+                  <li>원문 공고 링크</li>
                 </ul>
               </div>
             </aside>
           </div>
         </section>
 
-        <section id="guides" class="guides-section">
-          <div class="section-heading">
-            <p class="eyebrow">Guide</p>
-            <h2>추천 결과를 보고 바로 움직일 수 있어야 합니다</h2>
+        <section id="guides" class="content-section">
+          <div class="section-head">
+            <h2>지원 가이드</h2>
+            <p>추천 결과를 보고 바로 다음 행동을 결정할 수 있도록 구성합니다.</p>
           </div>
 
           <div class="guide-grid">
             <article class="guide-card">
               <h3>지원자격 먼저 확인</h3>
-              <p>연령, 지역, 법인 여부, 창업 단계가 맞지 않으면 다음 공고로 바로 넘어갈 수 있게 보여줍니다.</p>
+              <p>연령, 지역, 법인 여부, 창업 단계가 맞지 않으면 바로 다른 공고를 검토할 수 있어야 합니다.</p>
             </article>
             <article class="guide-card">
-              <h3>지원금액과 범위 분리</h3>
-              <p>총사업비, 보조율, 자부담, 지원한도를 구분해서 직관적으로 정리합니다.</p>
+              <h3>지원금액과 범위 구분</h3>
+              <p>보조율, 자부담, 최대 지원한도, 실제 지원 범위를 분리해 보여줍니다.</p>
             </article>
             <article class="guide-card">
               <h3>신청 절차 단계화</h3>
-              <p>접수처 확인, 서류 준비, 신청서 제출, 후속 상담 흐름을 단계형으로 안내합니다.</p>
+              <p>상담, 계획서 작성, 접수, 심사, 선정 이후 단계까지 순서대로 읽히게 정리합니다.</p>
             </article>
             <article class="guide-card">
-              <h3>참고 링크 연결</h3>
-              <p>원문 공고, 지자체 페이지, 농업기술센터 자료를 함께 묶어 신뢰성과 실행성을 높입니다.</p>
+              <h3>원문 링크 유지</h3>
+              <p>요약 정보와 별도로 실제 공고 링크를 함께 두어 신뢰성과 검증 가능성을 유지합니다.</p>
             </article>
           </div>
         </section>
