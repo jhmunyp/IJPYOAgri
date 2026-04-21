@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>이정표농업 | 맞춤형 농업 지원사업 탐색</title>
+    <title>이정표농업 | 농업 지원사업 맞춤 탐색</title>
     <meta
       name="description"
-      content="농업 지원사업을 검색하고 AI가 지역, 작목, 성장단계에 맞춰 추천하며 지원 자격과 지원 절차까지 구체적으로 안내하는 이정표농업 플랫폼"
+      content="농업 지원사업을 검색하고 AI가 지역, 품목, 성장 단계에 맞춰 추천하며 지원 자격과 신청 방법까지 구체적으로 안내하는 이정표농업 플랫폼"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,13 +17,23 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="utility-bar">
+      <div class="site-shell utility-inner">
+        <span>농업인 · 예비창업자 · 농업법인을 위한 지원사업 탐색 서비스</span>
+        <div class="utility-links">
+          <a href="#guides">이용 안내</a>
+          <a href="admin.html">운영 대시보드</a>
+        </div>
+      </div>
+    </div>
+
     <div class="site-shell">
       <header class="topbar">
         <a class="brand" href="#top">
           <span class="brand-mark">IJ</span>
           <span>
             <strong class="brand-name">이정표농업</strong>
-            <small class="brand-sub">농업 지원사업 탐색 · 추천 · 신청 안내 플랫폼</small>
+            <small class="brand-sub">지원사업 검색 · 맞춤 추천 · 신청 안내</small>
           </span>
         </a>
 
@@ -31,40 +41,87 @@
           <a href="#search">지원사업 검색</a>
           <a href="#results">추천 결과</a>
           <a href="#guides">지원 가이드</a>
+          <a href="#sources">정보 출처</a>
           <a href="admin.html">관리자</a>
         </nav>
 
         <div class="top-actions">
-          <a class="ghost-link" href="admin.html">운영 대시보드</a>
+          <a class="button secondary small" href="#search">지금 검색</a>
         </div>
       </header>
 
       <main id="top" class="page-main">
-        <section class="intro-section">
-          <div class="intro-copy">
-            <h1>찾고 싶은 지원사업을 검색하고 바로 비교할 수 있습니다.</h1>
+        <section class="hero-panel">
+          <div class="hero-copy">
+            <p class="section-label">맞춤형 농업 지원사업 탐색</p>
+            <h1>찾고 싶은 지원사업을 검색하고 지역에 맞는 사업을 바로 비교할 수 있습니다.</h1>
             <p class="hero-text">
-              지역, 분야, 성장 단계, 사업 형태를 기준으로 농업 지원사업을 정리하고,
-              추천 결과에서는 지원 자격, 지원금액, 신청 방법, 필요 서류, 참고 링크를
-              한 번에 확인할 수 있습니다.
+              정부, 도, 시, 군, 농업기술센터 공고를 바탕으로 지역과 분야, 성장 단계를 반영해
+              지원 자격, 지원금액, 신청 절차, 필요 서류, 참고 링크까지 한 화면에서 정리합니다.
             </p>
-          </div>
-          <div class="intro-notes">
-            <div class="note-block">
-              <strong>검색 중심</strong>
-              <p>검색어와 필터를 함께 사용해 결과 범위를 좁힙니다.</p>
+
+            <div class="hero-actions">
+              <a class="button primary" href="#search">지원사업 찾기</a>
+              <a class="button secondary" href="#results">추천 결과 보기</a>
             </div>
-            <div class="note-block">
-              <strong>실행 정보 중심</strong>
-              <p>추천 이유보다 실제 지원에 필요한 항목을 먼저 보여줍니다.</p>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <strong>검색 중심</strong>
+                <span>검색어와 필터를 함께 사용해 빠르게 좁힙니다.</span>
+              </div>
+              <div class="hero-stat">
+                <strong>실행 정보 중심</strong>
+                <span>자격, 금액, 절차, 링크를 먼저 보여줍니다.</span>
+              </div>
+              <div class="hero-stat">
+                <strong>현장형 구성</strong>
+                <span>농업인과 예비창업자가 바로 이해할 수 있게 정리합니다.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <img src="assets/farm-hero.svg" alt="농장, 비닐하우스, 작물 밭을 표현한 일러스트" />
+            <div class="media-caption">
+              <strong>오늘 많이 찾는 주제</strong>
+              <div class="quick-topics">
+                <button type="button" class="topic-chip" data-quick-query="청년 스마트팜 창업 지원">
+                  청년 스마트팜 창업 지원
+                </button>
+                <button type="button" class="topic-chip" data-quick-query="전북 시설원예 현대화">
+                  전북 시설원예 현대화
+                </button>
+                <button type="button" class="topic-chip" data-quick-query="축산 자동화 법인 지원">
+                  축산 자동화 법인 지원
+                </button>
+                <button type="button" class="topic-chip" data-quick-query="농산물 가공 창업 패키지">
+                  농산물 가공 창업 패키지
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
+        <section class="menu-strip">
+          <a href="#search">청년농 지원</a>
+          <a href="#search">스마트팜</a>
+          <a href="#search">시설원예</a>
+          <a href="#search">축산</a>
+          <a href="#search">가공·유통</a>
+          <a href="#guides">신청 절차</a>
+        </section>
+
         <section id="search" class="content-section">
           <div class="section-head">
-            <h2>지원사업 검색</h2>
-            <p>검색어를 먼저 입력하고, 지역과 분야를 선택하면 더 정확한 결과를 볼 수 있습니다.</p>
+            <div>
+              <h2>지원사업 검색</h2>
+              <p>검색어를 먼저 입력하고 지역, 분야, 성장 단계 조건을 추가하면 더 정확한 결과를 볼 수 있습니다.</p>
+            </div>
+            <div class="search-side-note">
+              <strong>추천 기준</strong>
+              <span>지역 일치, 분야 적합도, 성장 단계, 사업 형태, 검색어 연관도</span>
+            </div>
           </div>
 
           <form id="search-form" class="search-form">
@@ -76,21 +133,6 @@
                 placeholder="예: 전북 청년 스마트팜 창업 지원사업"
               />
               <button type="submit" class="button primary">검색</button>
-            </div>
-
-            <div class="quick-links-row">
-              <button type="button" class="text-chip" data-quick-query="청년 스마트팜 창업 지원">
-                청년 스마트팜 창업 지원
-              </button>
-              <button type="button" class="text-chip" data-quick-query="전북 시설원예 현대화">
-                전북 시설원예 현대화
-              </button>
-              <button type="button" class="text-chip" data-quick-query="축산 자동화 법인 지원">
-                축산 자동화 법인 지원
-              </button>
-              <button type="button" class="text-chip" data-quick-query="농산물 가공 창업 패키지">
-                농산물 가공 창업 패키지
-              </button>
             </div>
 
             <div class="filter-grid">
@@ -182,7 +224,7 @@
               </div>
 
               <div class="sidebar-box">
-                <h3>관리자 입력 기준</h3>
+                <h3>운영자 입력 기준</h3>
                 <ul class="clean-list">
                   <li>지원자격</li>
                   <li>지원금액</li>
@@ -197,8 +239,10 @@
 
         <section id="guides" class="content-section">
           <div class="section-head">
-            <h2>지원 가이드</h2>
-            <p>추천 결과를 보고 바로 다음 행동을 결정할 수 있도록 구성합니다.</p>
+            <div>
+              <h2>지원 가이드</h2>
+              <p>추천 결과를 보고 바로 다음 행동을 결정할 수 있도록 지원 순서를 정리했습니다.</p>
+            </div>
           </div>
 
           <div class="guide-grid">
@@ -212,12 +256,36 @@
             </article>
             <article class="guide-card">
               <h3>신청 절차 단계화</h3>
-              <p>상담, 계획서 작성, 접수, 심사, 선정 이후 단계까지 순서대로 읽히게 정리합니다.</p>
+              <p>상담, 계획서 작성, 접수, 심사, 선정 이후 단계까지 순서대로 정리합니다.</p>
             </article>
             <article class="guide-card">
               <h3>원문 링크 유지</h3>
-              <p>요약 정보와 별도로 실제 공고 링크를 함께 두어 신뢰성과 검증 가능성을 유지합니다.</p>
+              <p>실제 공고 링크를 함께 두어 신뢰성과 검증 가능성을 유지합니다.</p>
             </article>
+          </div>
+        </section>
+
+        <section id="sources" class="content-section">
+          <div class="section-head">
+            <div>
+              <h2>정보 출처</h2>
+              <p>농업 지원사업은 공공 출처를 기준으로 관리하고, 관리자 화면에서 링크를 함께 등록하는 구조입니다.</p>
+            </div>
+          </div>
+
+          <div class="source-grid">
+            <div class="source-card">
+              <strong>농사로</strong>
+              <p>농업기술 정보와 공공 농업 서비스의 대표 포털</p>
+            </div>
+            <div class="source-card">
+              <strong>지자체 공고</strong>
+              <p>도청, 시청, 군청, 농업기술센터의 실제 지원사업 페이지</p>
+            </div>
+            <div class="source-card">
+              <strong>관리자 검수</strong>
+              <p>등록된 링크와 요약 내용을 운영자가 검토 후 게시</p>
+            </div>
           </div>
         </section>
       </main>
